@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer-section py-4">
       <div className="container text-center">
         <p className="footer-text mb-3">
-          © {new Date().getFullYear()} Jay Jo | Built with ❤️ using React & Neon UI
+          © {new Date().getFullYear()} Fajar | Built with ❤️ using React & Neon UI
         </p>
         <div className="social-icons">
           <a
