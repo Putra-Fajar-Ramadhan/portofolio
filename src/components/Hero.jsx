@@ -7,7 +7,7 @@ const Hero = () => {
     <header className="hero-section text-center" id="home">
       <div className="container" data-aos="zoom-in">
         <h1 className="display-3 fw-bold neon-heading-scan">
-          Hi, I'm Jay Jo 👋
+          Hi, I'm Fajar 👋
         </h1>
         <h2 className="lead fs-4 mb-5 text-secondary">
           <Typewriter
