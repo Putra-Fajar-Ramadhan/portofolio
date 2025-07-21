@@ -1,0 +1,40 @@
+/* === Footer Section === */
+.footer-section {
+  background-color: rgba(30, 30, 47, 0.6);
+  color: #f8f9fa;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.2);
+  margin-top: 2rem;
+  border-radius: 15px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.4);
+}
+
+/* === Footer Text === */
+.footer-text {
+  font-size: 1rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 5px #bb86fc;
+  margin-bottom: 1rem;
+}
+
+/* === Social Icons === */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.social-link {
+  color: #bb86fc;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-link:hover {
+  color: #ffffff;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px #bb86fc, 0 0 30px #6f42c1;
+  border-radius: 50%;
+}

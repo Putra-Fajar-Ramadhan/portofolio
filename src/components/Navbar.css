@@ -1,0 +1,120 @@
+/* === Navbar Base === */
+.neon-navbar {
+  background-color: rgba(30, 30, 47, 0.75); /* tanpa gradient */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(111, 66, 193, 0.2),
+              0 0 40px rgba(187, 134, 252, 0.2);
+  margin: 1rem;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+/* === Brand Text === */
+.text-purple {
+  color: #bb86fc !important;
+  text-shadow: 0 0 5px #6f42c1, 0 0 10px #bb86fc, 0 0 20px #6f42c1;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.text-purple:hover {
+  text-shadow: 0 0 10px #bb86fc, 0 0 20px #bb86fc, 0 0 30px #bb86fc;
+  color: #ffffff !important;
+  animation: flickerText 1.5s infinite alternate;
+}
+
+/* === Links === */
+.nav-link-neon {
+  position: relative;
+  display: inline-block;
+  color: #f8f9fa !important;
+  transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.4s ease;
+  text-shadow: 0 0 5px #6f42c1, 0 0 10px #bb86fc;
+}
+
+.nav-link-neon::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, #6f42c1, #bb86fc, #6f42c1);
+  box-shadow: 0 0 8px #6f42c1, 0 0 15px #bb86fc;
+  border-radius: 2px;
+  transition: width 0.4s ease, box-shadow 0.3s ease;
+}
+
+.nav-link-neon:hover {
+  color: #bb86fc !important;
+  transform: scale(1.1) translateY(-2px);
+  text-shadow: 0 0 10px #bb86fc, 0 0 20px #bb86fc, 0 0 30px #bb86fc;
+  animation: flickerText 1.5s infinite alternate;
+}
+
+.nav-link-neon:hover::after {
+  width: 100%;
+}
+
+/* === Burger Menu Styling === */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.toggler-icon {
+  width: 28px;
+  height: 3px;
+  background-color: #bb86fc; /* Neon purple */
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  box-shadow: 0 0 8px #bb86fc, 0 0 16px #6f42c1;
+}
+
+.navbar-toggler:hover .toggler-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px #bb86fc, 0 0 24px #6f42c1;
+}
+
+/* === Burger Open State === */
+.navbar-toggler.open .toggler-icon:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.navbar-toggler.open .toggler-icon:nth-child(2) {
+  opacity: 0;
+}
+.navbar-toggler.open .toggler-icon:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+  box-shadow: 0 0 15px #bb86fc, 0 0 30px #6f42c1;
+}
+
+/* === Mobile Dropdown Glow === */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: rgba(30, 30, 47, 0.95);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(187, 134, 252, 0.4);
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+@keyframes flickerText {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 8px #bb86fc, 0 0 20px #6f42c1, 0 0 30px #bb86fc;
+  }
+  20%, 24%, 55% {
+    opacity: 0.8;
+    text-shadow: 0 0 5px #6f42c1, 0 0 10px #bb86fc;
+  }
+}

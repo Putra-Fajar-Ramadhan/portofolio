@@ -36,3 +36,60 @@
     transform: rotate(360deg);
   }
 }
+
+/* Neon Grid Background */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: linear-gradient(145deg, #0f0c29, #302b63, #24243e); /* Dark gradient background */
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+/* 🎯 Neon Grid Only */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: repeating-linear-gradient(
+      0deg,
+      rgba(187, 134, 252, 0.08) 0px,
+      rgba(187, 134, 252, 0.08) 1px,
+      transparent 1px,
+      transparent 40px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(187, 134, 252, 0.08) 0px,
+      rgba(187, 134, 252, 0.08) 1px,
+      transparent 1px,
+      transparent 40px
+    );
+  animation: gridMove 60s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+
+  /* 🌀 PARALLAX SCROLL */
+  transform: translate(calc(var(--scrollY, 0px) * -0.05), calc(var(--scrollY, 0px) * -0.05)) scale(1.05);
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(-80px, -80px) scale(1.05); }
+}
+
+/* Untuk semua browser modern */
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

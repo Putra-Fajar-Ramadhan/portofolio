@@ -1,0 +1,92 @@
+#about {
+  background-color: rgba(30, 30, 47, 0.6); /* transparan gelap */
+  color: #f8f9fa;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  padding: 4rem 0;
+  margin: 0 1.5rem 2rem; /* 👉 Margin kiri-kanan & bawah */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Border putih tipis */
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.2); /* Glow ungu soft */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#about:hover {
+  box-shadow: 0 0 25px rgba(187, 134, 252, 0.5);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.neon-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #bb86fc;
+  text-align: center;
+  text-shadow: 
+    0 0 10px #bb86fc, 
+    0 0 20px #6f42c1, 
+    0 0 30px #bb86fc;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+.about-img-wrapper {
+  position: relative;
+  width: 220px; /* Lebih kecil biar pas */
+  height: 220px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: visible; /* FIX biar scan-light nggak potong img */
+  box-shadow: 
+    0 0 20px rgba(187, 134, 252, 0.6),
+    0 0 40px rgba(111, 66, 193, 0.4);
+  animation: glowPulse 3s infinite alternate;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1; /* Pastikan foto di atas background */
+}
+
+.scan-light {
+  content: "";
+  position: absolute;
+  inset: -5px; /* Sedikit keluar biar nggak nutup foto */
+  border: 2px solid transparent;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 15px rgba(187, 134, 252, 0.5), 
+    inset 0 0 15px rgba(111, 66, 193, 0.3);
+  animation: scanRotate 5s linear infinite;
+  z-index: 2;
+  pointer-events: none; /* Biar nggak blok interaksi */
+}
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 
+      0 0 15px rgba(187, 134, 252, 0.5),
+      0 0 30px rgba(111, 66, 193, 0.3);
+  }
+  to {
+    box-shadow: 
+      0 0 30px rgba(187, 134, 252, 0.8),
+      0 0 60px rgba(111, 66, 193, 0.6);
+  }
+}
+
+@keyframes scanRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
