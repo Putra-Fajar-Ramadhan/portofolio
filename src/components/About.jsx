@@ -15,7 +15,7 @@ const About = () => {
           </div>
           <div className="col-md-6">
             <p className="about-text">
-              Halo! Saya Fajar, seorang Web Developer. Saya memiliki ketertarikan yang mendalam dalam membangun website yang responsif, dan user friendly. Setiap proyek yang saya kerjakan selalu berfokus pada desain yang modern dan pengalaman pengguna yang optimal.
+              Halo! Saya Fajar, Saya adalah mahasiswa Teknik Informatika di Politeknik Negeri Jakarta yang antusias mengembangkan diri dalam bidang teknologi. Memiliki ketertarikan kuat pada backend engineering serta kecerdasan buatan (AI) dan machine learning. Selain keahlian teknis, saya juga terus mengasah kemampuan kerja sama tim dan komunikasi untuk mendukung profesionalitas di dunia kerja. Saya percaya setiap tantangan adalah kesempatan untuk tumbuh dan menciptakan nilai yang lebih besar.
             </p>
           </div>
         </div>
