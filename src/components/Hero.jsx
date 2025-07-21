@@ -13,7 +13,7 @@ const Hero = () => {
           <Typewriter
             options={{
               strings: [
-                "Saya adalah seorang Web Developer yang berdedikasi dari Indonesia. Saya memiliki minat besar dalam membangun website yang modern, responsif, dan user-friendly. Dengan pengalaman dalam mengembangkan berbagai proyek, saya selalu berusaha menciptakan solusi digital yang inovatif serta memberikan pengalaman pengguna terbaik. Saya menikmati proses belajar teknologi baru dan menggabungkannya untuk menghasilkan produk yang fungsional dan estetis.",
+                "Saya adalah mahasiswa Teknik Informatika di Politeknik Negeri Jakarta yang antusias mengembangkan diri dalam bidang teknologi. Memiliki ketertarikan kuat pada backend engineering serta kecerdasan buatan (AI) dan machine learning. Selain keahlian teknis, saya juga terus mengasah kemampuan kerja sama tim dan komunikasi untuk mendukung profesionalitas di dunia kerja. Saya percaya setiap tantangan adalah kesempatan untuk tumbuh dan menciptakan nilai yang lebih besar.",
               ],
               autoStart: true,
               loop: false,
